@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+</style>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A lightweight page with a small backend"
+    />
+
+    <title>Welcome to Boiler Buys, Shopping for Students!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        BB Sellers/Buyers Portal
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Welcome!</p>
+      <button onclick="window.location.href = 'https://boiler-buys-main.glitch.me/'">Return to Main Page</button>
+
+      <p>Enter a new item:</p>
+
+      <form>
+        <input
+          name="title"
+          type="text"
+          maxlength="100"
+          placeholder="Product Title"
+        />
+        <input
+          name="description"
+          type="text"
+          maxlength="100"
+          placeholder="Product Description"
+        />
+        <input
+          name="price"
+          type="text"
+          maxlength="100"
+          placeholder="Product Price"
+        />
+        <input
+          name="contact"
+          type="text"
+          maxlength="100"
+          placeholder="Contact"
+        />
+        <label>
+          Category:
+        </label>
+        <select name="category">
+          <option value="0">
+            Tickets
+          </option>
+          <option value="1">
+            Clothing
+          </option>
+          <option value="2">
+            Furniture
+          </option>
+          <option value="3">
+            Dorm Buys
+          </option>
+          <option value="4">
+            Electronics
+          </option>
+          <option value="5">
+            Textbooks
+          </option>
+        </select>
+        <button type="submit" id="item-user">Add Item</button>
+      </form>
+
+      <table style="width:50%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Contact</th>
+            <th>Added</th>
+          </tr>
+        </thead>
+        <tbody id="item_table"></tbody>
+        
+      </table style="width:50%">
+            <p>Search the items on Boiler Buys:</p>
+      <form>
+        <label>
+          Category:
+        </label>
+        <select name="category2">
+          <option value="0">
+            Tickets
+          </option>
+          <option value="1">
+            Clothing
+          </option>
+          <option value="2">
+            Furniture
+          </option>
+          <option value="3">
+            Dorm Buys
+          </option>
+          <option value="4">
+            Electronics
+          </option>
+          <option value="5">
+            Textbooks
+          </option>
+        </select>
+        <button type="submit" id="search_item">Search Item</button>
+      </form>
+
+      <table style="width:50%">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Contact</th>
+            <th>Added</th>
+          </tr>
+        </thead>
+        <tbody id="search_table"></tbody>
+      </table>
+    </main>
+  </body>
+</html>
